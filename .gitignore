@@ -1,0 +1,15 @@
+# External dependencies
+node_modules
+
+# Bundled output
+/dist
+
+# Parcel-bundler cache files
+/.cache
+
+# Log Files
+*.log
+
+# Environment variables
+.env
+.env.development
