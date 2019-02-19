@@ -12,7 +12,7 @@ var express     = require("express"),
 var courseRoutes     = require("./routes/courses"),
     indexRoutes      = require("./routes/index")
     
-mongoose.connect("mongodb://localhost/collabo_v1", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/collabo_v1", { useMongoClient: true });
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
