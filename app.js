@@ -12,7 +12,9 @@ var express     = require("express"),
 var courseRoutes     = require("./routes/courses"),
     indexRoutes      = require("./routes/index")
     
-mongoose.connect("mongodb://localhost/collabo_v1", { useMongoClient: true });
+// mongoose.connect("mongodb://localhost/collabo_v1", { useMongoClient: true });
+mongoose.connect("mongodb://Joe:projectM90@collabo-db-shard-00-00-htm2b.gcp.mongodb.net:27017,collabo-db-shard-00-01-htm2b.gcp.mongodb.net:27017,collabo-db-shard-00-02-htm2b.gcp.mongodb.net:27017/test?ssl=true&replicaSet=collabo-db-shard-0&authSource=admin&retryWrites=true");
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
