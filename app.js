@@ -45,6 +45,6 @@ app.use("/", indexRoutes);
 app.use("/courses", courseRoutes);
 
 
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
    console.log("The Collabo Server Has Started!");
 });
